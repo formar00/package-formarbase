@@ -7,7 +7,7 @@
 
 import UIKit
 
-@MainActor public class BaseVC: UIViewController,
+@MainActor open class BaseVC: UIViewController,
                                 BaseViewControllerable,
                                 ContentViewPresentable,
                                 NavigationProperties {
