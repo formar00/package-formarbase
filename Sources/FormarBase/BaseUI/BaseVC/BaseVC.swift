@@ -7,33 +7,33 @@
 
 import UIKit
 
-@MainActor open class BaseVC: UIViewController,
-                                BaseViewControllerable,
-                                ContentViewPresentable,
-                                NavigationProperties {
+open class BaseVC: UIViewController,
+                   BaseViewControllerable,
+                   NavigationProperties {
+    
     // MARK: - Views
     
     public lazy var contentView: UIView = UIView()
     
     // MARK: - Properties
     
-//    public lazy var disposeBag: DisposeBag = DisposeBag()
+    //    public lazy var disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - Initializer
     
     public init() {
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     @available(*, unavailable)
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - DeInitializer
-        
+    
     deinit {
-//        MyLogger.writeLog(.debug, message: "\(self)")
+        //        MyLogger.writeLog(.debug, message: "\(self)")
     }
     
     // MARK: - LifeCycle
@@ -54,7 +54,7 @@ import UIKit
         super.viewWillAppear(animated)
         
         guard isDefaultSetupNavigationBar() else { return }
-//        defaultSetupNavigationBar()
+        //        defaultSetupNavigationBar()
     }
     
     // MARK: - Helpers
@@ -72,9 +72,9 @@ import UIKit
 extension BaseVC {
     
     private func defaultSetupMethod() {
-//        setupConetntViewProperty()
-//        setupConetntViewHierarchy()
-//        setupConetntViewLayout()
+        //        setupConetntViewProperty()
+        //        setupConetntViewHierarchy()
+        //        setupConetntViewLayout()
     }
-        
+    
 }
